@@ -1,0 +1,31 @@
+Set Cover/SetCover_BaseBlock_TestSuite_Coverage_Analysis/*Exec
+
+Set Cover/compiled_mutants/*
+
+Set Cover/Mutation_Testing/executables_base/*
+Set Cover/Mutation_Testing/executables_each/*
+Set Cover/Mutation_Testing/executables_mt/*
+Set Cover/Mutation_Testing/mutations_CodeOnly/*
+Set Cover/Mutation_Testing/outputs_base/*
+Set Cover/Mutation_Testing/outputs_each/*
+Set Cover/Mutation_Testing/outputs_mt/*
+
+Set Cover/SetCover_BaseBlock_TestSuite_Coverage_Analysis/*Exec
+Set Cover/SetCover_BaseBlock_WithError_TestSuite_Coverage_Analysis/*Exec
+Set Cover/SetCover_CP_TestSuite/*Exec
+Set Cover/SetCover_MT_TestSuite/*Exec
+Set Cover/SetCover_MT_TestSuite_Coverage_Analysis/Relation1/*Exec
+Set Cover/SetCover_MT_TestSuite_Coverage_Analysis/Relation2/*Exec
+Set Cover/SetCover_MT_TestSuite_Coverage_Analysis/Relation3/*Exec
+Set Cover/SetCover_MT_TestSuite_Coverage_Analysis/Relation4/*Exec
+Set Cover/SetCover_Mutation_TestSuite/*Exec
+Set Cover/*gcov
+Set Cover/*gcda
+Set Cover/*gcno
+
+Set Cover/CoverageReports/*Coverage_Analysis/*
+
+
+Multiple Knapsack/multiKnapsack/target
+Multiple Knapsack/multiKnapsack/.metadata
+Multiple Knapsack/multiKnapsack/src/test/bin

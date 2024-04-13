@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">EachBlockTest (12-Dec-2023 6:46:18 PM)</a> &gt; <a href="../../index.html" class="el_group">SYSC5105KnapsackProblem</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">knapsack</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package knapsack;
+
+import java.util.LinkedList;
+
+<span class="nc" id="L5">public class Main {</span>
+
+    public static void main(String[] args) {
+
+        //Setting up knapsacks and items.
+//        MultipleKnapsack knapsacks = new MultipleKnapsack();
+//        knapsacks.addKnapsack(new Knapsack(20, &quot;s1&quot;));
+//        knapsacks.addKnapsack(new Knapsack(15, &quot;s2&quot;));
+//        knapsacks.addKnapsack(new Knapsack(12, &quot;s3&quot;));
+//        knapsacks.addKnapsack(new Knapsack(5, &quot;s4&quot;));
+//
+//        LinkedList&lt;KnapsackItem&gt; items = new LinkedList&lt;&gt;();
+//        items.add(new KnapsackItem(5, 10, &quot;i1&quot;));
+//        items.add(new KnapsackItem(10, 5, &quot;i2&quot;));
+//        items.add(new KnapsackItem(5, 2, &quot;i3&quot;));
+//        items.add(new KnapsackItem(7, 17, &quot;i4&quot;));
+//        items.add(new KnapsackItem(15, 8, &quot;i5&quot;));
+//        items.add(new KnapsackItem(20, 30, &quot;i6&quot;));
+//        items.add(new KnapsackItem(15, 8, &quot;i7&quot;));
+//        items.add(new KnapsackItem(20, 30, &quot;i8&quot;));
+<span class="nc" id="L25">        MultipleKnapsack knapsacks = new MultipleKnapsack();</span>
+<span class="nc" id="L26">        knapsacks.addKnapsack(new Knapsack(5, &quot;s1&quot;));</span>
+<span class="nc" id="L27">        knapsacks.addKnapsack(new Knapsack(5, &quot;s2&quot;));</span>
+
+<span class="nc" id="L29">        LinkedList&lt;KnapsackItem&gt; items = new LinkedList&lt;&gt;();</span>
+<span class="nc" id="L30">        items.add(new KnapsackItem(0, 10000000, &quot;i1&quot;));</span>
+<span class="nc" id="L31">        items.add(new KnapsackItem(0, 5, &quot;i2&quot;));</span>
+<span class="nc" id="L32">        items.add(new KnapsackItem(0, 2, &quot;i3&quot;));</span>
+<span class="nc" id="L33">        items.add(new KnapsackItem(0, 200000, &quot;i4&quot;));</span>
+
+
+<span class="nc" id="L36">        knapsacks.greedyMultipleKnapsack(items);</span>
+<span class="nc" id="L37">        knapsacks.calculateValue();</span>
+<span class="nc" id="L38">        MultipleKnapsack result = knapsacks.neighborSearch(knapsacks);</span>
+<span class="nc" id="L39">        result.printResult();</span>
+
+<span class="nc" id="L41">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span>EachBlockTest (12-Dec-2023 6:46:18 PM)</div></body></html>

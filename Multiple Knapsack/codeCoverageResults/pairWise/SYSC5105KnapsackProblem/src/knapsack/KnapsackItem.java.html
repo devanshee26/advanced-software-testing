@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>KnapsackItem.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">PairWiseTest (12-Dec-2023 6:46:22 PM)</a> &gt; <a href="../../index.html" class="el_group">SYSC5105KnapsackProblem</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">knapsack</a> &gt; <span class="el_source">KnapsackItem.java</span></div><h1>KnapsackItem.java</h1><pre class="source lang-java linenums">package knapsack;
+
+public class KnapsackItem {
+
+    private int weight;
+    private int value;
+    private double valueByWeight;
+    private String name;
+
+    /**
+     * Constructor that instantiates weight, value and name for an item.
+     * @param weight
+     * @param value
+     * @param name
+     */
+<span class="fc" id="L16">    public KnapsackItem(int weight, int value, String name) {</span>
+<span class="fc" id="L17">        this.weight = weight;</span>
+<span class="fc" id="L18">        this.value = value;</span>
+<span class="fc" id="L19">        valueByWeight = (double) value / (double) weight;</span>
+<span class="fc" id="L20">        this.name = name;</span>
+<span class="fc" id="L21">    }</span>
+
+    /**
+     * Method that gets the value / weight value from an item.
+     * @return
+     */
+    public double getValueByWeight() {
+<span class="fc" id="L28">        return valueByWeight;</span>
+    }
+
+    /**
+     * Method that returns the weight an item has.
+     * @return
+     */
+    public int getWeight() {
+<span class="fc" id="L36">        return weight;</span>
+    }
+
+    /**
+     * Method that gets the value an item has.
+     * @return
+     */
+    public int getValue() {
+<span class="fc" id="L44">        return value;</span>
+    }
+
+    /**
+     * Method that sets the name of an item.
+     * @return
+     */
+    public String getName() {
+<span class="nc" id="L52">        return name;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span>PairWiseTest (12-Dec-2023 6:46:22 PM)</div></body></html>
