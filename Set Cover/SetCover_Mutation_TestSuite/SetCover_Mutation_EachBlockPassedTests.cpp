@@ -36,6 +36,7 @@ public:
 };
 
 bool SetCover_Mutation_EachBlockPassedTests::anyTestCasePassed = false;
+bool SetCover_Mutation_EachBlockPassedTests::aTestFailed = false;
 
 void handle_signal(int sig) {
     longjmp(jump_buffer, 1);
@@ -207,7 +208,7 @@ TEST_F(SetCover_Mutation_EachBlockPassedTests, TestCase5) {
 
 // each block with error passed
 // Test case 6
-TEST_F(SetCover_Mutation_EachBlockPassedTests_WithErrorBlocks, TestCase6) {
+TEST_F(SetCover_Mutation_EachBlockPassedTests, TestCase6) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
         const char *testArgs[] = { "SetCover.c", "-f", "tests/MutationTesting/EachBlockAllPassed/test_6.txt" };

@@ -1,4 +1,4 @@
-#include "../SetCover.h"
+#include "./SetCover.h"
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <cstdlib>
@@ -187,10 +187,10 @@ protected:
 TEST(Metamorphic_Testing_Relation2, TestCase1) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation2/test_1.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation2/test_1.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_2.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_2.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer

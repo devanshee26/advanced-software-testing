@@ -204,6 +204,9 @@ public:
     }
 };
 
+bool SetCover_Mutation_MetamorphicPassedTests::anyTestCasePassed = false;
+bool SetCover_Mutation_MetamorphicPassedTests::aTestFailed = false;
+
 //metamorphic relation 1
 // Test case 1
 TEST_F(SetCover_Mutation_MetamorphicPassedTests, TestCase1) {
@@ -1351,11 +1354,11 @@ TEST_F(SetCover_Mutation_MetamorphicPassedTests, TestCase36) {
 
 // Add more test cases as needed
 int main(int argc, char **argv) {
-    ::testing::InitGoogleTest_F(&argc, argv); 
+    ::testing::InitGoogleTest(&argc, argv); 
     int result = RUN_ALL_TESTS();
 
-    bool a_test_failed = SetCover_Mutation_EachBlockPassedTests::aTestFailed;
+    bool a_test_failed = SetCover_Mutation_MetamorphicPassedTests::aTestFailed;
     printf(" a test failed  %d\n", a_test_failed ? 1 : 0);
 
-    return SetCover_Mutation_EachBlockPassedTests::aTestFailed ? 1 : 0;
+    return SetCover_Mutation_MetamorphicPassedTests::aTestFailed ? 1 : 0;
 }

@@ -197,6 +197,38 @@ TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase5) {
     signal(SIGSEGV, SIG_DFL);
 }
 
+// Test case 6
+TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase6) {  
+    register_signal_handler();  
+    if (setjmp(jump_buffer) == 0) {
+        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_6.txt" };
+        int argc = sizeof(testArgs) / sizeof(testArgs[0]);
+    
+        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_6.txt";
+
+        testing::internal::CaptureStdout();  // Redirect stdout to a buffer
+
+        // Run SetCover function
+        runSetCover(argc, const_cast<char**>(testArgs));
+        // Capture the output
+        std::string actualOutput = testing::internal::GetCapturedStdout();
+        printf("output \n %s \n", actualOutput.c_str());
+
+        // Read expected output
+        std::ifstream expectedOutputFile(expectedOutputFileName);
+        std::stringstream expectedOutputBuffer;
+        expectedOutputBuffer << expectedOutputFile.rdbuf();
+
+        // Compare actual and expected output
+        EXPECT_EQ(actualOutput, expectedOutputBuffer.str());
+    }
+    else {
+        std::string actualOutput = testing::internal::GetCapturedStdout();
+        FAIL() << "Segmentation fault detected.";
+    }
+    signal(SIGSEGV, SIG_DFL);
+}
+
 
 // Add more test cases as needed
 int main(int argc, char **argv) {

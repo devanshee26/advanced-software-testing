@@ -1,4 +1,4 @@
-#include "../SetCover.h"
+#include "./SetCover.h"
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <cstdlib>
@@ -187,10 +187,10 @@ protected:
 TEST(Metamorphic_Testing_Relation4, TestCase1) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_1.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_1.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -218,10 +218,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase1) {
 TEST(Metamorphic_Testing_Relation4, TestCase2) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_2.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_2.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -249,10 +249,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase2) {
 TEST(Metamorphic_Testing_Relation4, TestCase3) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_3.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_3.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -280,10 +280,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase3) {
 TEST(Metamorphic_Testing_Relation4, TestCase4) {  
     register_signal_handler();  
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_4.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_4.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -312,10 +312,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase4) {
 TEST(Metamorphic_Testing_Relation4, TestCase5) {  
     register_signal_handler();  
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_5.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_5.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -344,10 +344,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase5) {
 TEST(Metamorphic_Testing_Relation4, TestCase6) {   
     register_signal_handler(); 
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_6.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_6.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -376,10 +376,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase6) {
 TEST(Metamorphic_Testing_Relation4, TestCase7) { 
     register_signal_handler();   
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_7.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_7.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -408,10 +408,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase7) {
 TEST(Metamorphic_Testing_Relation4, TestCase8) {    
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_8.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_8.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -440,10 +440,10 @@ TEST(Metamorphic_Testing_Relation4, TestCase8) {
 TEST(Metamorphic_Testing_Relation4, TestCase9) { 
     register_signal_handler();   
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/MetamorphicTesting/Relation4/test_9.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/MetamorphicTesting/Relation4/test_9.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/MetamorphicTesting/output_4b.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/MetamorphicTesting/output_4b.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 

@@ -201,10 +201,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase5) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase6) {   
     register_signal_handler(); 
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_6.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_6.jpg" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_1.txt";
+        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_6.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -297,7 +297,7 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase8) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase9) { 
     register_signal_handler();   
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_9.jpeg" };
+        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_9.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
         std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_9.txt";
@@ -365,70 +365,6 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase11) {
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
         std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_11.txt";
-
-        testing::internal::CaptureStdout();  // Redirect stdout to a buffer
-
-        // Run SetCover function
-        runSetCover(argc, const_cast<char**>(testArgs));
-        // Capture the output
-        std::string actualOutput = testing::internal::GetCapturedStdout();
-        printf("output \n %s \n", actualOutput.c_str());
-
-        // Read expected output
-        std::ifstream expectedOutputFile(expectedOutputFileName);
-        std::stringstream expectedOutputBuffer;
-        expectedOutputBuffer << expectedOutputFile.rdbuf();
-
-        // Compare actual and expected output
-        EXPECT_EQ(actualOutput, expectedOutputBuffer.str());
-    }
-    else {
-        std::string actualOutput = testing::internal::GetCapturedStdout();
-        FAIL() << "Segmentation fault detected.";
-    }
-    signal(SIGSEGV, SIG_DFL);
-}
-
-// Test case 12
-TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase12) { 
-    register_signal_handler();   
-    if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_12.txt" };
-        int argc = sizeof(testArgs) / sizeof(testArgs[0]);
-    
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_12.txt";
-
-        testing::internal::CaptureStdout();  // Redirect stdout to a buffer
-
-        // Run SetCover function
-        runSetCover(argc, const_cast<char**>(testArgs));
-        // Capture the output
-        std::string actualOutput = testing::internal::GetCapturedStdout();
-        printf("output \n %s \n", actualOutput.c_str());
-
-        // Read expected output
-        std::ifstream expectedOutputFile(expectedOutputFileName);
-        std::stringstream expectedOutputBuffer;
-        expectedOutputBuffer << expectedOutputFile.rdbuf();
-
-        // Compare actual and expected output
-        EXPECT_EQ(actualOutput, expectedOutputBuffer.str());
-    }
-    else {
-        std::string actualOutput = testing::internal::GetCapturedStdout();
-        FAIL() << "Segmentation fault detected.";
-    }
-    signal(SIGSEGV, SIG_DFL);
-}
-
-// Test case 13
-TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase13) { 
-    register_signal_handler();   
-    if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_13.txt" };
-        int argc = sizeof(testArgs) / sizeof(testArgs[0]);
-    
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_13.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 

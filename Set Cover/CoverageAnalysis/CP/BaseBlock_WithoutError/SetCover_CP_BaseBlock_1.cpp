@@ -1,4 +1,4 @@
-#include "../SetCover.h"
+#include "./SetCover.h"
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <cstdlib>
@@ -44,10 +44,10 @@ protected:
 TEST(CategoryPartition_BaseBlockCriteria, TestCase1) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithoutErrorBlocks/CP_BaseBlock/test_1.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithoutErrorBlocks/CP_BaseBlock/test_1.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithoutErrorBlocks/CP_BaseBlock/output_1.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithoutErrorBlocks/CP_BaseBlock/output_1.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer

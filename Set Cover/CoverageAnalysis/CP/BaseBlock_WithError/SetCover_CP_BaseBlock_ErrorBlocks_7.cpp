@@ -1,4 +1,4 @@
-#include "../SetCover.h"
+#include "./SetCover.h"
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <cstdlib>
@@ -44,10 +44,10 @@ protected:
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase1) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_1.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_1.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_1.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_1.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -75,10 +75,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase1) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase2) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_2.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_2.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_2.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_2.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -106,10 +106,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase2) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase3) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_3.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_3.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_3.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_3.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -137,10 +137,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase3) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase4) {  
     register_signal_handler();  
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_4.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_4.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_4.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_4.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -169,10 +169,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase4) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase5) {  
     register_signal_handler();  
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_5.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_5.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_5.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_5.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -201,10 +201,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase5) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase6) {   
     register_signal_handler(); 
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_6.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_6.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_1.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_1.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 
@@ -233,10 +233,10 @@ TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase6) {
 TEST(CategoryPartition_BaseBlockCriteria_WithErrorBlocks, TestCase7) { 
     register_signal_handler();   
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_7.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_BaseBlock/test_7.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_7.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_BaseBlock/output_7.txt";
 
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
 

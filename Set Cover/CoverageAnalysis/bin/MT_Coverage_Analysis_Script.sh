@@ -10,14 +10,18 @@ generate_coverage() {
     relation="$2"
     rm -rf ../../CoverageReports/CoverageAnalysis/MT/Relation${relation}/R${relation}_${test}
     mkdir ../../CoverageReports/CoverageAnalysis/MT/Relation${relation}/R${relation}_${test}
-    executable="../MT/Relation${relation}/SetCover_MT_Relation${relation}_${test}_Exec"
+
+    # executable="../MT/Relation${relation}/SetCover_MT_Relation${relation}_${test}_Exec"
+    # rm -f ../MT/Relation${relation}/SetCover_MT_Relation${relation}_${test}_Exec
+    executable="output_exec"
+    rm -f output_exec
     
     # Compile with coverage flags
     Set Cover/CoverageAnalysis/MT/Relation1/SetCover_MT_Relation1_1.cpp
     g++ -std=c++14 -fprofile-arcs -ftest-coverage -o "${executable}" SetCover.c "../MT/Relation${relation}/SetCover_MT_Relation${relation}_${test}.cpp" $(pkg-config --cflags --libs gtest) -pthread -lgtest -lgtest_main -lpthread
     
     # Execute the program
-    "${executable}"
+    ./${executable}
     
     # Generate coverage data
     gcov SetCover.c
@@ -32,3 +36,6 @@ for relation in {1..4}; do
         generate_coverage "$test_number" "$relation"
     done
 done
+rm -rf *.gc*
+rm -rf coverage_*.*
+rm -f output_exec

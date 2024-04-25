@@ -1,4 +1,4 @@
-#include "../SetCover.h"
+#include "./SetCover.h"
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <cstdlib>
@@ -44,10 +44,10 @@ protected:
 TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase1) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_1.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_1.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_1.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_1.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -75,10 +75,10 @@ TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase1) {
 TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase2) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_2.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_2.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_2.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_2.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
@@ -106,10 +106,10 @@ TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase2) {
 TEST(CategoryPartition_EachBlockCriteria_WithErrorBlocks, TestCase3) {
     register_signal_handler();
     if (setjmp(jump_buffer) == 0) {
-        const char *testArgs[] = { "SetCover.c", "-f", "tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_3.txt" };
+        const char *testArgs[] = { "SetCover.c", "-f", "../../tests/CP_TestsWithErrorBlocks/CP_EachBlock/test_3.txt" };
         int argc = sizeof(testArgs) / sizeof(testArgs[0]);
     
-        std::string expectedOutputFileName = "expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_3.txt";
+        std::string expectedOutputFileName = "../../expected_outputs/CP_TestsWithErrorBlocks/CP_EachBlock/output_3.txt";
 
         // Run SetCover function
         testing::internal::CaptureStdout();  // Redirect stdout to a buffer
